@@ -43,8 +43,6 @@ void prim(int n, int weight[n][n], int start) {
         for (int v = 0; v < n; v++)
             if (weight[u][v] != INF && selected[v] == 0 && weight[u][v] < distance[v])
                 distance[v] = weight[u][v];
-
-
     }
 }
 
