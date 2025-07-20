@@ -41,7 +41,7 @@ void insertVertex(Graph* g, int vertex) {
     }
 }
 
-void insertEdge(Graph* g, int start, int end, int weight=1) {
+void insertEdge(Graph* g, int start, int end, int weight) {
     if (start >= g->n || end >= g->n)
         return;
 
@@ -70,22 +70,4 @@ void terminate(Graph* g) {
     for (int i = 0; i < g->max; i++)
         free(g->Matrix[i]);
     free(g->Matrix);
-}
-
-int main() {
-    Graph* g = (Graph*)malloc(sizeof(Graph));
-    init(g, 2, DIRECTED, WEIGHTED);
-
-    for (int i = 0; i < 4; i++)
-        insertVertex(g, i);
-
-    insertEdge(g, 0, 1, 3);
-    insertEdge(g, 0, 2, 2);
-    insertEdge(g,0,3, 7);
-    insertEdge(g,1,2, -1);
-    insertEdge(g,2,3, INF);
-
-    adjacencyMatrix(g);
-
-    return 0;
 }

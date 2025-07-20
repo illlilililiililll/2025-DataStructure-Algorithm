@@ -16,7 +16,7 @@ void init(Graph* g, int n, Directed dir, Weighted w);
 
 void insertVertex(Graph* g, int vertex); // Vertex
 
-void insertEdge(Graph* g, int start, int end, int weight);
+void insertEdge(Graph* g, int start, int end, int weight=1);
 
 void adjacencyMatrix(const Graph* g);
 
