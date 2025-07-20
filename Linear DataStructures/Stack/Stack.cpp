@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "stack.h"
+#include "Stack.h"
 
 void init(Stack *s, int max) {
     s->init_max = s->max = max;

@@ -8,7 +8,7 @@ typedef struct arrayQueue {
     int *data;
 } arrayQueue;
 
-void init(arrayQueue *Deque, int max);
+void init(arrayQueue *q, int max);
 
 bool empty(const arrayQueue *q);
 
@@ -31,7 +31,7 @@ void printQueue(const arrayQueue *q);
 void terminate(arrayQueue *q);
 
 // CircularQueue
-typedef struct Deque {
+typedef struct Queue {
     int max;
     int ptr;
     int front;
@@ -39,26 +39,26 @@ typedef struct Deque {
     int *data;
 } circularQueue;
 
-void init(Deque *Deque, int max);
+void init(circularQueue *q, int max);
 
-bool empty(const Deque *q);
+bool empty(const circularQueue *q);
 
-void enqueue(Deque *q, int x);
+void enqueue(circularQueue *q, int x);
 
-int dequeue(Deque *q);
+int dequeue(circularQueue *q);
 
-int peek(const Deque *q);
+int peek(const circularQueue *q);
 
-void clear(Deque *q);
+void clear(circularQueue *q);
 
-int capacity(const Deque *q);
+int capacity(const circularQueue *q);
 
-int size(const Deque *q);
+int size(const circularQueue *q);
 
-int search(const Deque *q, int x);
+int search(const circularQueue *q, int x);
 
-void printQueue(const Deque *q);
+void printQueue(const circularQueue *q);
 
-void terminate(Deque *q);
+void terminate(circularQueue *q);
 
 #endif

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "heap.h"
+#include "Heap.h"
 
 void init(heap *h) {
     h->size = 0;
