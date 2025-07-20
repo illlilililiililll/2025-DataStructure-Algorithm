@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define INF 9999
+#define INF 2147483647
 
 void floydWarshall(int n, int graph[][n]) {
     int i, j, k;

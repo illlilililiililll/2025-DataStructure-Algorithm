@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define INF 9999
+#define INF 2147483647
 
 int minVertex(int n, int distance[], int selected[]) {
     int v = -1;
