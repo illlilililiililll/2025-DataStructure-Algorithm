@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define INF 2147483647
 
 void Dijkstra(int n, int Graph[n][n], int start) {
