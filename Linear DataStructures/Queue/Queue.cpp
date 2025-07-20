@@ -67,17 +67,17 @@ void terminate(arrayQueue *q) {
 }
 
 // CircularQueue
-void init(Deque *q, int max) {
+void init(circularQueue *q, int max) {
     q->max = max;
     q->ptr = q->front = q->rear = 0;
     q->data = (int*)calloc(max, sizeof(int));
 }
 
-bool empty(const Deque *q) {
+bool empty(const circularQueue *q) {
     return q->ptr == 0;
 }
 
-void enqueue(Deque *q, int x) {
+void enqueue(circularQueue *q, int x) {
     q->ptr++;
     q->data[q->rear++] = x;
 
@@ -85,7 +85,7 @@ void enqueue(Deque *q, int x) {
         q->rear = 0;
 }
 
-int dequeue(Deque *q) {
+int dequeue(circularQueue *q) {
     q->ptr--;
     int result = q->data[q->front++];
     if (q->front == q->max)
@@ -94,23 +94,23 @@ int dequeue(Deque *q) {
     return result;
 }
 
-int peek(const Deque *q) {
+int peek(const circularQueue *q) {
     return q->data[q->front];
 }
 
-void clear(Deque *q) {
+void clear(circularQueue *q) {
     q->ptr = q->front = q->rear = 0;
 }
 
-int capacity(const Deque *q) {
+int capacity(const circularQueue *q) {
     return q->max;
 }
 
-int size(const Deque *q) {
+int size(const circularQueue *q) {
     return q->ptr;
 }
 
-int search(const Deque *q, int x) {
+int search(const circularQueue *q, int x) {
     for (int i = 0; i < q->ptr; i++) {
         int idx = (i + q->front) % q->max;
         if (q->data[idx] == x)
@@ -119,7 +119,7 @@ int search(const Deque *q, int x) {
     return -1;
 }
 
-void printQueue(const Deque *q) {
+void printQueue(const circularQueue *q) {
     printf("{ ");
     for (int i = 0; i < q->ptr; i++) {
         printf("%d", q->data[(i + q->front) % q->max]);
@@ -130,7 +130,7 @@ void printQueue(const Deque *q) {
     printf(" }\n");
 }
 
-void terminate(Deque *q) {
+void terminate(circularQueue *q) {
     free(q->data);
     q->max = q->front = q->rear = 0;
 }
