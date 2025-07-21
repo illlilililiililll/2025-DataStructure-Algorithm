@@ -9,6 +9,7 @@ typedef struct Stack {
 } stack;
 
 void init(Stack *Deque, int max);
+bool empty(const Stack *s);
 void push(Stack *s, int x);
 int pop(Stack *s);
 int peek(const Stack *s);

@@ -8,6 +8,10 @@ void init(Stack *s, int max) {
     s->data = (int*)calloc(max, sizeof(int));
 }
 
+bool empty(const Stack *s) {
+    return s->ptr == 0;
+}
+
 void push(Stack *s, int x) {
     if (s->ptr >= s->max)
         s->data = (int*)realloc(s->data, (++s->max) * sizeof(int));
