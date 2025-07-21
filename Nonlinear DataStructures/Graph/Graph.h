@@ -14,7 +14,7 @@ typedef struct Graph{
 
 void init(Graph* g, int n, Directed dir, Weighted w);
 
-void insertVertex(Graph* g, int vertex); // Vertex
+void insertVertex(Graph* g, int vertex);
 
 void insertEdge(Graph* g, int start, int end, int weight=1);
 
